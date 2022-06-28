@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 def remove_char_at(str, n):
-	part1 = str[:n]
-	part2 = str[n+1:]
-	return part1 + part2
+    part1 = str[:n]
+    part2 = str[n+1:]
+    return part1 + part2
