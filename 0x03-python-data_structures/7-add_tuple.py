@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
     # If too long, cut the tuple to the first 2 elements
