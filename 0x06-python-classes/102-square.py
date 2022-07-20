@@ -7,7 +7,7 @@ argument. Also checks if the size arg has a valid value.
 """
 
 
-class Square:
+class Square():
     """A square class."""
     def __init__(self, size=0, position=(0, 0)):
         """Initialization of the class square."""
