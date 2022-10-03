@@ -1,12 +1,8 @@
 #!/usr/bin/node
-let args = process.argv.slice(2).map((x) => {
-  return parseInt(x);
-});
-
-if (args.length <= 1) {
+const argsList = process.argv.slice(2).map(num => parseInt(num));
+const sortedList = argsList.sort((a, b) => a < b);
+if (sortedList.length <= 1) {
   console.log(0);
 } else {
-  console.log(args.sort((a, b) => {
-    return b - a;
-  })[1]);
+  console.log(sortedList[1]);
 }
