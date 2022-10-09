@@ -1,37 +1,23 @@
 #!/usr/bin/python3
-"""script that changes the name of a State
-   object from the database hbtn_0e_6_usa
 """
-from model_state import Base, State
+changes the name of the State object where id=2 to New Mexico from a database
+"""
+
+import sqlalchemy
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sys import argv
-from sqlalchemy import create_engine
+from model_state import Base, State
 
 
-def model_state_update():
-    """functio that changes name of
-    state object of my db"""
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
-        argv[1],
-        argv[2],
-        argv[3]),
-        pool_pre_ping=True
-    )
-    Base.metadata.create_all(engine)
-
-    # configure Session class with desired options
-    Session = sessionmaker()
-
-    Session.configure(bind=engine)
-
+if __name__ == "__main__":
+    eng = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(argv[1],
+                                                                    argv[2],
+                                                                    argv[3]))
+    Base.metadata.create_all(eng)
+    Session = sessionmaker(bind=eng)
     session = Session()
-
-    update_state = session.query(State).filter_by(id=2).first()
-
-    update_state.name = 'New Mexico'
+    state = session.query(State).filter_by(id=2).first()
+    state.name = "New Mexico"
     session.commit()
     session.close()
-
-
-if __name__ == '__main__':
-    model_state_update()
