@@ -23,3 +23,7 @@ FILE | DESCRIPTION
 [12. Twitter Auth](./103-search_twitter.py) | Python script that takes in 3 strings and sends a search request to the Twitter API
 
 ----
+
+## Author
+
+[Mulugeta Achiso Wodebo](https://www.linkedin.com/in/mulugeta-wodebo-843118170) | [Twitter](https://twitter.com/anem_achiso) | [GitHub](https://github.com/Anemachiso)
