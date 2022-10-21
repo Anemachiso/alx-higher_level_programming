@@ -9,7 +9,8 @@ def hbtn_status_0():
         html = response.read()
         utf8 = html.decode('utf-8')
         print("Body response:\n\t- type: {}".format(type(html)))
-        print("\t- content: {}\n\t- utf8 content: {}".format(html, utf8, end=""))
+        print("\t- content: {}\n\t- utf8 content: {}".
+              format(html, utf8, end=""))
 
 
 if __name__ == '__main__':
