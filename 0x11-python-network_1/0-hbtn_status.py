@@ -8,8 +8,8 @@ def hbtn_status_0():
     with urlopen('https://intranet.hbtn.io/status') as response:
         html = response.read()
         utf8 = html.decode('utf-8')
-        print("Body response:\n\t- type: {}".format(type(html)))
-        print("\t- content: {}\n\t- utf8 content: {}".
+        print("Body response:\n\t    - type: {}".format(type(html)))
+        print("\t    - content: {}\n\t    - utf8 content: {}".
               format(html, utf8, end=""))
 
 
