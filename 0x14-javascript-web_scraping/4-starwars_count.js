@@ -11,7 +11,7 @@ request.get(apiUrl, function (error, response, body) {
     for (let i = 0; i < films.length; i++) {
       const charList = films[i].characters;
       for (let j = 0; j < charList.length; j++) {
-        if (charList[j] === 'https://swapi-api.hbtn.io/api/films/' || charList[j] === 'https://swapi-api.hbtn.io/api/films/') {
+        if (charList[j] === 'https://swapi-api.hbtn.io/api/people/18/' || charList[j] === 'https://swapi-api.hbtn.io/api/people/18/') {
           countWedge += 1;
         }
       }
